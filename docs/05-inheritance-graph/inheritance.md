@@ -138,6 +138,7 @@ Fraction <|-- MixedFraction
 
 <!-- <ImageCard path={require("./images/fraction_mixedfraction.jpg").default} widthPercentage="30%"/> -->
 <br/>
+
 In the above UML diagram, we choose not to have any additional attributes but only different initialization arguments. This means that we have to initialize the numerator and the denominator from the three arguments used in the initialization `MixedFraction(top, bottom, whole)`, i.e.
 
 $$

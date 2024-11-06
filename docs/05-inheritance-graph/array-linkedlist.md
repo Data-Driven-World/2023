@@ -33,6 +33,7 @@ int mynumber[10];
 Such declaration reserves 10 spaces in the memory to store an array of `int` type. If one `int` number takes 32-bit (32 digits of 0s and 1s), then the program reserves 10 spaces of 32-bit in the memory as shown in the figure below.
 
 <ImageCard path={require("./images/array_memory.jpg").default} widthPercentage="40%"/>
+
 In the example that we have, `n` is 10 and so the index of the last element is $n-1=9$. You can access element using the index. For example, you can use `mynumber[0]` to access the first element and `mynumber[9]` to access the last element. In C programming language, the name of the array is also the address of the first element.
 
 Once it is declared to have 10 spaces, the array cannot be extended. You need to reallocate the memory if you have more numbers than what is declared. Moreover, each element has the same data type. The consequence of this is that each element occupies the same size in the memory. Since it occupies the same size, it is easy to know where the other data are. The advantage of this way of creating an array is that it is fast and simple.
@@ -225,6 +226,7 @@ classDiagram
 
 <br/>
 <br/>
+
 In the UML above, we showed that `MyAbstractList` implements the Abstract Base Class of `Iterator`. To satisfies this, you need to define a method called `__iter__()` in `MyAbstractList` that returns an iterator object. The class `MyAbstractList` also defines some common property and methods for both `MyArrayList` and `MyLinkedList` such as:
 
 - `size`, which is an attribute that stores the number of items in the list.
