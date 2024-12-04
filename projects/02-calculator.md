@@ -486,6 +486,13 @@ The expected output for both exercises 1 and 2 can be found in this video.
     In many cases, you may need to do a [*hard refresh*](https://www.getfilecloud.com/blog/2015/03/tech-tip-how-to-do-hard-refresh-in-browsers/#.XuwVw2ozaJs) of your browser. Another way is to reload when running flask. Do either one of the following :
     - `export FLASK_ENV=development` and then `flask run`.
     - or `flask run --reload --debugger`
+1. Flask wont start because Python detects a circular import.
+
+   Ensure that your IDE does not sort imports automatially (the isort VSCode plugin does this).
+
+   The `app/__init__.py` file requires that the `application` be created before `routes` is imported. This is because the routes use decorators provided by the `application`.
+
+   This is an intentional design decision made by the flask team, as mentioned in [the flask documentation](https://flask-cn.readthedocs.io/en/stable/patterns/#larger-applications)
 
 ## References
 - [Flask Tutorial using Templates](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates)
