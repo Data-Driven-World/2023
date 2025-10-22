@@ -20,6 +20,7 @@ By the end of this lesson, you should be able to:
 - Solve problems using **recursion**.
 - Identify problems that has recursive solutions.
 - Identify **base case** and **recursive case** in a recursive problem and its solution.
+- Use **helper function** for a recursive solution.
 - Explain and implement the recursive solution of **Tower of Hanoi**.
 - Derive solution for **recurrence** of Tower of Hanoi using **recursion-tree** method.
 
