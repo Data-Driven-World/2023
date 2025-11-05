@@ -144,7 +144,7 @@ This will output the following:
 2_Exercise_2.py
 ```
 
-You will need to modify these two files for Exercises 1 and 2.
+You will need to modify these two files for Exercises 1 and 2. Additionally, you have to create a new file `Exercise_3.py` for the open ended part.
 
 ## Running Streamlit Application
 
@@ -287,6 +287,31 @@ In this task, we will complete the page by creating the rest of the widgets.
 - Create a button which sort the list of numbers when the user clicks it. 
 - Display the sorted numbers as a text.
 - Create a button that clears the Text Input and the displayed sorted numbers when the user clicks it.
+
+## Exercise 3
+
+This is an open ended part of your mini project. Create a new page by creating a new file called `3_Exercise_3.py`. You are free to design what you want to do for this page as long as it satisfies the following constraints.
+
+- You should use a new sorting algorithm that is not taught in class, cohort problem set and homework problem sets. You have to implement this new sorting algorithm from scratch without using any built-in function in Python or any other third-party library.
+- You should page should make use of the sorting algorithm to sort **non-numeric** data. You are allowed to sort numeric data if it is a component of another collection data type such as a tuple, dictionary with a numeric keys, etc.
+
+Follow the guides below to complete your task:
+
+1. Brainstorm on the data used by various apps, websites, or any information systems. List down all the various data that you see that may require sorting algorithm.
+1. Choose one that you would like to simulate on your Exercise 3 page. Use the above constraints in your consideration as well as the complexity of **inputting** and **displaying** the data.
+1. Choose one sorting algorithm which you would like to learn and implement.
+1. Implement the new sorting algorithm and put it inside `library.py`.
+1. Import the sort function inside your `3_Exercise_3.py`.
+1. Design the User Interface (UI) to input the data and display the data.
+1. Create two buttons. The first button is to sort the data and the second button is to clear the data to the original state.
+
+During your checkoff you need to present the following for Exercise 3.
+
+* Your brainstorming of your ideation for the data. Show the inspiration from the various apps, websites, or any other information systems that you use during your brainstorming sessions.
+* Present your criteria for your selection using Pugh Chart.
+* Do the same for your algorithm brainstorming and selection. Present your case why you choose this particular algorithm to implement using Pugh Chart.
+* Present your UI design using either Miro or Figma. You need to have more than one single design and one single iteration. You need to be able to share your design choice that leads you to your final UI design.
+* Demo and present your working app and implementation. 
 
 ## Appendix: Setup for Local Machine
 
