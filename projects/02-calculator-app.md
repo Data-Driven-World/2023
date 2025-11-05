@@ -434,6 +434,28 @@ Hint: You can refer to `pages/1_Users.py` to see how to write a DataFrame into a
 
 Once you are done with this part, your web app should be working fine. The other two pages are written for you and you need not do anything. However, it is good if you try to understand what the code is doing and see if you can rewrite and modify this page to make it better.
 
+## Exercise 3
+
+This is an open ended exercise for Mini Project 2. You need to create a new page called `5_Improved.py`. Your task is the following:
+
+* Choose one of the previous existing pages and create an improved version of that page.
+* The improvement must involve not only the **User Experience** but also the **Code Quality**.
+
+You need to satisfy the following constraints:
+
+* Your overall app should continue to work as it is either using the old version or the improved version. For example, let's say you create an improved version of the `2_Question.py` page. Users should still be able to use the other pages either when they create the questions using the old page `2_Question.py` or the new page `5_Improved.py`.
+* The improvements must comprises both categories: User Experience and Code Quality.
+* You cannot replace your user-defined functions with a third party library.
+* You are allowed to refactor your code when calling Streamlit or Pandas libraries with an alternative functions in those libraries to make the code better.
+
+Use the following guide to do this design exercise:
+
+* Do some research about good User Interface/User Experience for an app.
+* Do some research about Code Quality and some of the metrics you can use to measure good code.
+* Brainstorm some of the pain points in using the various pages of the current app.
+* List down various improvements that could potentially be done on the app. Consider the cost of doing those improvements as well.
+* Use Pugh Chart to choose which page that you would like to improve. 
+* Document all your design considerations and decisions and present them during your checkoff.
 
 ## Appendix: Setup for Local Machine
 
