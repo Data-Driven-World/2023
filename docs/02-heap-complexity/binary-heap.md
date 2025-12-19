@@ -266,19 +266,18 @@ Input:
 Output: None, restore the element in place
 Steps:
 1. current_i = i # current index starting from input i
-2. swapped = True
-3. As long as ( left(current_i) < length of array) AND swapped, do:
-    3.1 swapped = False
-    3.2 max_child_i = get the index of largest child of the node current_i
-    3.3 if array[max_child_i] > array[current_i], do:
-        3.3.1 swap( array[max_child_i], array[current_i])
-        3.3.2 swapped = True
-    3.3 current_i = max_child_i # move to the index of the largest child
+2. As long as ( left(current_i) < length of array) AND swapped, do:
+    2.1 max_child_i = get the index of largest child of the node current_i
+    2.2 if array[max_child_i] > array[current_i], do:
+        2.2.1 swap( array[max_child_i], array[current_i])
+    2.3 otherwise:
+        2.3.1 exit loop
+    2.4 current_i = max_child_i # move to the index of the largest child
 ```
 
 </DeepDive>
 
-We introduced a boolean variable called `swapped`. At every iteration, we set `swapped` to `False`. If there is a swap, we set this boolean variable to `True` and continues to the next iteration. If there is no swap, the boolean variable is still `False` and so it will stop the iteration.
+If there is a swap, we continue to the next iteration. If there is no swap, we will break from the loop and it will stop the iteration.
 
 ## Building A Heap
 
