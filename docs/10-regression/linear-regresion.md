@@ -418,6 +418,6 @@ $$
 
 and $n$ is the number of target values.
 
-This coefficient gives you how close the data is to a straight line. The closer it is to a straight line, the value will be close to 1.0. This means there is a correlation between the independent variable and the dependent variable. When there is no correlation, the value will be close to 0.
+This coefficient gives you how close the data is to a straight line. The closer it is to a straight line, the value will be close to 1.0. This means that the straight line model fits the data pretty well. When the value is close to 0. This means that the straight line model does not describe the data well. 
 
 In your problem sets, you will work on writing a code to do all these tasks.
