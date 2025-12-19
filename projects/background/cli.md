@@ -11,6 +11,8 @@ import ChatBaseBubble from "@site/src/components/ChatBaseBubble";
 
 This document shall provide you with sufficient knowledge to understand why you type every single command to get the mini projects running. It is **not** technically in-depth (you'd have to go to ISTD for that), but is _sufficient_ to get you through the mini projects **setup**.
 
+**NOTE:** This guide uses the old public repository `https://github.com/Data-Driven-World/d2w_mini_projects.git` as its examples. This will be different from your current mini project repository. Your current mini projects have separate repositories for mini project 1 and 2 and they use Streamlit instead of Flask.  However, the concept about command line interface remains the same. 
+
 <ChatBaseBubble/>
 
 :::caution
@@ -61,11 +63,11 @@ Open a terminal window. Regardless of whichever OS you use, you are likely to be
 
 <ImageCard customClass={"no-invert-color"} path={require("./images/2.png").default} widthPercentage="70%"/>
 
-You can type `commands` into the prompt, and then press `enter` to **execute** that command. For example, the first two commands you have to enter to **download** the `mp_sort` (mini project 1) repository is:
+You can type `commands` into the prompt, and then press `enter` to **execute** that command. For example, the first two commands you have to enter to **download** the mini project 1 repository is as shown below. **NOTE: Replace the URL with your private repository's URL after accepting the assignment from Gradescope**. The URL is the portion that starts with `https://github.com/...`. 
 
 ```
 cd Downloads
-git clone https://github.com/Data-Driven-World/d2w_mini_projects
+git clone https://github.com/Data-Driven-World/d2w_mini_projects.git
 ```
 
 Each of the line above is **one** command. The first command is **cd** (stands for change directory). It changes your **current working directory**, just like how you click open folders after folders in your Finder or File Explorer to navigate through your **file system** and find the right location and create new things in this location you want:
