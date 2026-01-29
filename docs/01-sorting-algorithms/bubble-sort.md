@@ -169,7 +169,7 @@ After we work on the test cases, we can now write down the steps in pseudocode. 
 
 - There are two iteration levels:
   1. the _inner_ iteration is when we compare the pairs (a, b) and do a swap if $a>b$,
-  1. the _outer_ iteration is when repeat the inner iteration pass starting from the first pair again.
+  1. the _outer_ iteration is when we repeat the inner iteration pass starting from the first pair again.
 - The number of _inner_ iterations is $n-1$, where $n$ is the number of elements in the list. This is because the inner iteration compares a pair. So if there is $n$ elements, there will be $n-1$ pairs to compare.
 - The number of _outer_ iterations is also $n-1$. You can refer back to the case above that there were 9 _outer_ iterations for the 10 elements.
 
