@@ -711,7 +711,7 @@ Output:
 
 ## Special Methods
 
-Some method names in Python are special and can be overridden. One example of special method that you have encountered is `__init__()` method. This method is always called during object instantiation. There are many other special methods, but for now, we will introduce one more, which is the `__str__()` method. This method is called when Python tries to convert the object to an `str` object. One common instance of this is when you print the object.
+Some method names in Python are special. One example of a special method that you have encountered is `__init__()` method. This method is always called during object instantiation. There are many other special methods, but for now, we will introduce one more, which is the `__str__()` method. This method is called when Python tries to convert the object to an `str` object. One common instance of this is when you print the object.
 
 If we print the `Coordinate()` object, we will see the following output.
 
@@ -721,7 +721,11 @@ print(p1)
 ```
 
 
-Python basically does not understand how to print a `Coordinate()`. But we can tell Python how to convert this object into an `str` which Python can display into the screen. Let's override the method `__str__()`.
+Python basically does not understand how to print a `Coordinate()`. But we can tell Python how to convert this object into an `str` which Python can display into the screen. We do this by **overriding** the `__str__()` method definition.
+
+In object-oriented programming, overriding a method means that a subclass provides its own implementation of a method that is already defined in its superclass. The term of subclass and superclass will be clearer in the subsequent lesson when we learn about inheritance. But for now, it is sufficient for us to know that all user-defined class in Python is a sublcass of an `object` class as its ultimate parent class. 
+
+What we will do now is to tell Python how to convert our user-defined object into a string by overriding the `__str__()` method. Let's override the method `__str__()`.
 
 ```python live_py
 import math
@@ -763,6 +767,39 @@ print(my_robot.pos.x, my_robot.pos.y)
 ```
 
 But now it is no longer necessary and Python knows how to convert your `Coordinate` object into a string which can be displayed into the standard output.
+
+## Operator Overloading
+
+Python allows *operator overloading* by defining some special methods such that we can make use of the built-in operators in Python such as `+`, `-`, `==`, etc. Each of this operator has a special method that we can overload. For example, let's say if we want to define `+` operator for `Coordinate` object, we can write something as in the following code.
+
+```python live_py
+import math
+
+class Coordinate:
+
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        new_x = self.x + other.x
+        new_y = self.y + other.y
+        return Coordinate(new_x, new_y)
+```
+
+Notice that we have added a special method `__add__(self, other)` in our class definition. This method returns a new `Coordinate` object with a new `x` and `y` coordinates. These `x` coordinate is computed by adding the `x` attribute of `self` with the `x` attribute of `other`. Similarly with the `y` coordinate. What is `self` and what is `other`? We can see this clearly when we use the operator itself as shown in the code below.
+
+```python live_py
+p1 = Coordinate(1, 2)
+p2 = Coordinate(3, 4)
+p3 = p1 + p2
+```
+
+In the code above, `p3` is the result of applying the operator `+`. When Python sees this operator, it will check the left hand side of that operator and check its type. It finds that the left hand side is `p1` and it is of type `Coordinate`. Python then tries to check if this class has defined the `__add__()` method. Since we did, Python will call this method. 
+
+When Python calls this method `__add__(self, other)`, it will pass two arguments. In the code above, `p1`, which is the left hand side operand, is passed on to `self` while `p2`, which is the right hand side operand, is passed on to `other`. This means that the new coordinate `x` value will be `1 + 3` and the new `y` value will be `2 + 4`. This two values are then passed on to create a new object in the line `return Coordinate(new_x, new_y)`. 
+
+By overloading the `+` operator, Python now knows how to _add_ two `Coordinate` objects. We can overload other operators such as `-` and `=` and many other built-in operators in Python. 
 
 ## UML Diagram
 
