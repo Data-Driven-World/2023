@@ -44,12 +44,12 @@ Let's draw the UML diagram of the `StateMachine` class.
 ```mermaid
 classDiagram
 class StateMachine{
-    start_state
     state
     start()
     step(inp)
     transduce(list_inp)
-    get_next_values(state, inp)*
+    start_state(init_state)*
+    get_next_values(state, inp)* 
 }
 <<abstract>> StateMachine
 

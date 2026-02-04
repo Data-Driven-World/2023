@@ -163,7 +163,7 @@ You will work on the implementation of this class in your Problem Set.
 
 We have been looking into this search problem from the perspective of state machine. This implies that we can create a state machine class to represent a state machine that does state-space search. This class, however, has unique requirements as you need to make sure you have enough information for the problem. This means that you may want to ensure that such class must provide information about the following:
 
-- `statemap`, which gives you the transition relationship from one state to another with respect to the legal input
+- `statemap`, which gives you the output and next state mapping given the current state and the current input.
 - `legal_inputs`, which is a set of legal inputs in this domain.
 
 We can enforce this in Python using the Abstract Base Class and creating an **abstract property**. This is a similar concept as how we implement the computed property `start_state`. We can, thus, define the following class:
@@ -188,7 +188,7 @@ class StateSpaceSearch(StateMachine):
         return self.__start_state
 
     @start_state.setter
-    @abstrctmethod
+    @abstractmethod
     def start_state(self, value):
         self.__start_state = value
 
@@ -206,19 +206,19 @@ class MapSM(StateSpaceSearch):
 
     @property
     def statemap(self):
-        statemap = {"S": ["A", "B"],
-                    "A": ["S", "C", "D"],
-                    "B": ["S", "D", "E"],
-                    "C": ["A", "F"],
-                    "D": ["A", "B", "F", "H"],
-                    "E": ["B", "H"],
-                    "F": ["C", "D", "G"],
-                    "H": ["D", "E", "G"],
-                    "G": ["F", "H"]}
+        statemap = {"S": [("A", "A"), ("B", "B")],
+                    "A": [("S", "S"), ("C", "C"), ("D", "D")],
+                    "B": [("S", "S"), ("D", "D"), ("E", "E")],
+                    "C": [("A", "A"), ("F", "F")],
+                    "D": [("A", "A"), ("B", "B"), ("F", "F"), ("H", "H")],
+                    "E": [("B", "B"), ("H", "H")],
+                    "F": [("C", "C"), ("D", "D"), ("G", "G")],
+                    "H": [("D", "D"), ("E", "E"), ("G", "G")],
+                    "G": [("F", "F"), ("H", "H")]}
         return statemap
 ```
 
-Notice that the `statemap` must be defined in the child class that implements `StateSpaceSearch` because such mapping transition information can be different from one state machine to another. This cannot be defined in the base class.
+Notice that the `statemap` must be defined in the child class that implements `StateSpaceSearch` because such mapping transition information can be different from one state machine to another. This cannot be defined in the base class. Moreover, it is made of a list where each element is a tuple. Each element in that list represents one transition from the "S" state. The element represents the "next_state" and the "output". In the example above, the output is the same as the next state which is why the two values are the same. However, the output can be different than the next state in other cases. 
 
 Similarly, the computed property `legal_inputs` can take in the information from `statemap` and return a set of the legal inputs. Though we may think that the code to create such a set is the same for all state-space search, it actually depends on how one implements the `statemap` property. If one uses a list as in our case, such set will be a set of integer values. But if one uses a dictionary, the set `legal_inputs` may be a set of other data types used in the key of that dictionary.
 
