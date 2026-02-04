@@ -47,6 +47,8 @@ There is another kind of search that can be done on a graph. This is called **de
 
 ### (C)ases
 
+We will now give an example of a depth first search algorithm. Recall that breadth first search creates a BFS tree. On the other hand, depth first search algorithm creates a **forest**. A forest is a collection of trees (and yes, it can consist of a single tree). More formally, a forest is a disjoint union of trees. Let's see how the algorithm works. In the below example, our forest consists only of a single tree.
+
 <ImageCard path={require("./images/bfs_graph_example.jpg").default} widthPercentage="20%"/>
 
 In depth-first search, we go down the tree before moving to the next siblings. For example, as we start from A, we look into its neighbouring vertices. So vertex A has two neighbours, i.e. B and D. The depth-first search algorithm will visit one of them, say vertex B. After it visits B, it will explore one of the neighbours of B instead of visiting D. This is illustrated below.
@@ -127,7 +129,9 @@ The figure above shows a directed graph of dependencies between different tasks.
 Let's try to perform DFS for the above graph. The discovery time and the finishing time for each task is shown in the figure below.
 <ImageCard path={require("./images/topological_sort_finishingtime.jpg").default} widthPercentage="70%"/>
 
-In the process of DFS, it somehow starts with "undershirt" and traverse to all the children vertices in the tree, i.e. "pants", "wallets", "belt", and then "shoes". After this, it creates another tree starting from "socks", and then another tree starting from "watch", and finally another tree starting from "underpant". The depth-first forest looks like the figure below.
+In the process of DFS, it starts with "undershirt" and traverse to all the children vertices in the tree, i.e. "pants", "wallets", "belt", and then "shoes". After this, it creates another tree starting from "socks", and then another tree starting from "watch", and finally another tree starting from "underpant". The DFS can actually starts from "socks" or "watch" or "underpant". But each of these will have no other vertex to go to and remain as a single vertex. Our DFS algorithm can be modified to specify which vertex to start from or it can be determined based on the goal. Currently, it starts aribitrarily and it picks "undershirt" first.
+
+The depth-first forest looks like the figure below.
 <ImageCard path={require("./images/depth_first_forest.jpg").default} widthPercentage="70%"/>
 
 We can re-order the tasks by its finishing time from the largest to the smallest as shown in the figure below.
