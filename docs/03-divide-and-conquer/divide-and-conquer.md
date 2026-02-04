@@ -413,3 +413,116 @@ This means that the computational time for the Tower of Hanoi problem is _expone
 - when $n = 5$, it takes 31 steps
 
 Notice also that in this case $c = 1$ as we can get the number of steps from $2^n - 1$.
+
+## Helper Functions
+
+There are cases when a recursive solution employs a recursive _helper_ function. This is usually so that the recursive function is efficient in terms of memory or some other aspects. Let's try to illustrate this by constructing a recursive solution for a binary search problem.
+
+In a binary search problem, the goal is to find whether an element or a _key_ can be found in a collection or a list. The solution is intuitive enough if the list is sorted with some order. The way binary search works then is to look whether the element (or the key) that we want to find is in the middle. If yes, then we have found it. If not, we check if the key is smaller or larger than the middle element. If it is smaller, we continue the search in the left part (smaller part) of the list. Otherwise, we search in the right part (bigger part) of the list.
+
+```python live_py
+def binary_search(coll, key):
+    n = len(coll)
+    mid_pos = n // 2
+    if coll == []:
+        return None
+    elif key == coll[mid_pos]:
+        return key
+    elif key < coll[mid_pos]:
+        return binary_search(coll[:mid_pos], key)
+    elif key > coll[mid_pos]:
+        return binary_search(coll[mid_pos + 1:], key)
+
+found = binary_search([1, 2, 3, 4, 5, 6], 2)
+print(found)
+
+found = binary_search([1, 2, 3, 4, 5, 6], 4)
+print(found)
+
+found = binary_search([1, 2, 3, 4, 5, 6, 7], 4)
+print(found)
+
+found = binary_search([1, 2, 3, 4, 5, 6], 11)
+print(found)
+```
+
+The above solution is recursive. You can identify the first two conditions are the base cases which is when the key is not found or when the key is the middle point element. The last two cases are the recursive case as can be seen from the function call `binary_search()`. In these recursive call, we can see that the collection is halved and becomes smaller than the original collection. This agrees with our pattern for the recursive solutions.
+
+However, the above approach was not efficient for large list or collection. The reason is that the recursive calls inside the recursive case create new lists in the memory when slicing the original list into half. Is there a better and more efficient way? The answer is yes. We do not need to slice the list. We can make use of the original list by passing the index of the starting and the ending position of the list which we want to search instead. See the new solution below.
+
+```python live_py
+def binary_search(coll, key, start, end):
+    n = end - start 
+    mid_pos = start + n // 2
+    if n == 0:
+        return None
+    elif key == coll[mid_pos]:
+        return key
+    elif key < coll[mid_pos]:
+        return binary_search(coll, key, start, mid_pos)
+    elif key > coll[mid_pos]:
+        return binary_search(coll, key, mid_pos + 1, end)
+
+input_coll = [1, 2, 3, 4, 5, 6]
+found = binary_search(input_coll, 2, 0, len(input_coll))
+print(found)
+
+found = binary_search(input_coll, 4, 0, len(input_coll))
+print(found)
+
+input_coll_odd = [1, 2, 3, 4, 5, 6, 7]
+found = binary_search(input_coll_odd, 4, 0, len(input_coll_odd))
+print(found)
+
+found = binary_search(input_coll_odd, 11, 0, len(input_coll_odd))
+print(found)
+```
+
+Instead of dealing with python list slicing and creating new list every recursive call, the above solution works with the original list instead. In every subsequent recursive call, it passes on the original list with two additional index, i.e. `start` and `end`. These two arguments indicate the starting and the ending position of the index (as usual, the ending index is exclusive of the last element). This way, search the left hand side can be written simply as `binary_search(coll, key, start, mid_pos)`. We search the key from the `start` position all the way to the `mid_pos` position which excludes the middle element in the current search.
+
+However, the use of this function is cumbersome as can be seen from the way we call the function in the test cases below.
+
+```python
+input_coll = [1, 2, 3, 4, 5, 6]
+binary_search(input_coll, 2, 0, len(input_coll))
+binary_search(input_coll, 4, 0, len(input_coll))
+input_coll_odd = [1, 2, 3, 4, 5, 6, 7]
+binary_search(input_coll_odd, 4, 0, len(input_coll_odd))
+binary_search(input_coll_odd, 11, 0, len(input_coll_odd))
+```
+
+In the original call, the last two argument are always `0` and `len(input_coll)`. We can transform this to be more similar to our original function by employing two functions as shown below.
+
+```python live_py
+def binary_search(coll, key):
+    return binary_search_helper(coll, key, 0, len(coll))
+
+def binary_search_helper(coll, key, start, end):
+    n = end - start 
+    mid_pos = start + n // 2
+    if n == 0:
+        return None
+    elif key == coll[mid_pos]:
+        return key
+    elif key < coll[mid_pos]:
+        return binary_search_helper(coll, key, start, mid_pos)
+    elif key > coll[mid_pos]:
+        return binary_search_helper(coll, key, mid_pos + 1, end)
+
+input_coll = [1, 2, 3, 4, 5, 6]
+found = binary_search(input_coll, 2)
+print(found)
+
+found = binary_search(input_coll, 4)
+print(found)
+
+input_coll_odd = [1, 2, 3, 4, 5, 6, 7]
+found = binary_search(input_coll_odd, 4)
+print(found)
+
+found = binary_search(input_coll_odd, 11)
+print(found)
+```
+
+In the above solutions, we can see that the original function call has been simplified to only with two arguments as the first solution. On the other hand, we rename our recursive function that do the actual work as `binary_search_helper()`. This is the function that contains the recursive calls. This solution is more efficient than the first one because it does not make a copy of the list when doing the binary search. 
+
