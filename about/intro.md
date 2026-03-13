@@ -53,3 +53,13 @@ Students are expected to do their pre-reading and homework on their own while di
 Each week we allocate 5 hours of cohort lessons. You are recommended to spend 1.5 hours for pre-class activities and 5.5 hours for homework and mini projects weekly as well.
 
 <ImageCard path={require("./images/DDW-2023-Lesson-Time.drawio-2.png").default} widthPercentage="80%"/>
+
+### Setting Up Python
+
+We recommend that you download Python using [Anaconda](https://www.anaconda.com/download). This course is tested using Python 3.12. If you download a more recent Python version and would like to to create an Python environment for this course, you can follow these steps:
+
+1. Open your terminal (Mac) or Anaconda Prompt (Win).
+1. Type the following: `conda create -n ddwenv python=3.12 anaconda mypy nb_mypy`.
+1. Whenever you work for your DDW assignment, choose `ddwenv` for your Python environment, or activate it first from your terminal by typing: `conda activate ddwenv`.
+
+You will need to activate this environment every time you want to use `ddwenv`. Otherwise, you can automatically activate this upon start up of your computer. Ask your TA or do some internet search on how to do so. 
