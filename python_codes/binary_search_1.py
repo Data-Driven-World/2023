@@ -16,5 +16,8 @@ print(found)
 found = binary_search([1, 2, 3, 4, 5, 6], 4)
 print(found)
 
+found = binary_search([1, 2, 3, 4, 5, 6, 7], 4)
+print(found)
+
 found = binary_search([1, 2, 3, 4, 5, 6], 11)
 print(found)
