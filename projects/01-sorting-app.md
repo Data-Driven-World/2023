@@ -22,13 +22,12 @@ In this mini project, you will develop a web app to sort numbers using Streamlit
 
 ### Project Structure
 
-Once you have downloaded the repository, you can go to the repository and to the folder for this mini project. The commands below assume you are working from Vocareum. If you work from your local computer, the path might be different depending on where you download the mini project directory.
+Once you have downloaded the repository, you can go to the repository and to the folder for this mini project. The commands below assume you are working from Github Codespace. Check the guide to launch Github Codespace. If you work from your local computer, the path might be different depending on where you download the mini project directory.
 
-Assuming you are at `/voc` folder in Vocareum, go to `mini-project-1-template` directory.
+Assuming you are at `root` folder of your project in Codespace, list down all the files.
 
 
 ```shell
-cd work/mini-project-1-template
 ls
 ```
 
@@ -58,7 +57,7 @@ In the following steps, we will only display the Unix/Linux commands which you c
 Go to the root folder of mini project 1 template.
 
 ```shell
-$ cd /voc/work/mini-project-1-template
+$ cd /workspaces/10-020-data-driven-world-summer-2026-1d-mini-project-1-mini-project-1-template-xxx
 ```
 
 First make sure that you have installed `pipenv` package. If not, run the following command in the terminal.
@@ -158,7 +157,17 @@ To run the web app, type the following in the terminal.
 streamlit run Home.py
 ```
 
-Streamlit will attempt to open a web browser at `localhost:8051` and you should be able to see the Home page with a sidebar menu. If you click Exercise 1 or 2 pages, you will see some errors for now. The reason is that you have not completed these exercises.
+The output looks like the following:
+
+```shell
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.0.12.48:8501
+  External URL: http://207.46.224.91:8501
+```
+
+Streamlit will attempt to open a web browser at `localhost:8051`. Do a `CTRL-click` on the `Local URL` link in Codespace and it will open the web page for you. You should be able to see the Home page with a sidebar menu. If you click Exercise 1 or 2 pages, you will see some errors for now. The reason is that you have not completed these exercises.
 
 To stop the web app, type `CTRL+C` in the terminal. 
 
@@ -293,7 +302,7 @@ In this task, we will complete the page by creating the rest of the widgets.
 This is an open ended part of your mini project. Create a new page by creating a new file called `3_Exercise_3.py`. You are free to design what you want to do for this page as long as it satisfies the following constraints.
 
 - You should use a new sorting algorithm that is not taught in class, cohort problem set and homework problem sets. You have to implement this new sorting algorithm from scratch without using any built-in function in Python or any other third-party library.
-- You should page should make use of the sorting algorithm to sort **non-numeric** data. You are allowed to sort numeric data if it is a component of another collection data type such as a tuple, dictionary with a numeric keys, etc.
+- Your page should make use of the sorting algorithm to sort **non-numeric** data. You are allowed to sort numeric data if it is a component of another collection data type such as a tuple, dictionary with a numeric keys, etc.
 
 Follow the guides below to complete your task:
 
@@ -346,15 +355,15 @@ git clone https://your-mini-project-1-repo-url
 
 ### Installing Environment Locally
 
-The `Pipfile` was tested in Vocareum with Python 3.10. Some packages may break if you use a different Python version -- welcome to software engineering dependency hell! We recommend using Miniconda just for this course and create a separate environment for it.
+The `Pipfile` was tested in Vocareum with Python 3.12. Some packages may break if you use a different Python version -- welcome to software engineering dependency hell! We recommend using Miniconda just for this course and create a separate environment for it.
 
 [Download Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install), then open Anaconda Prompt (Windows) or Terminal (Mac/Linux). Run
 
 ```shell
-conda create -n ddw python=3.10 pipenv
+conda create -n ddw python=3.12 pipenv
 conda activate ddw 
 ```
-This will create a new environment called `ddw` with Python 3.10 and Pipenv installed, and activate it.
+This will create a new environment called `ddw` with Python 3.12 and Pipenv installed, and activate it.
 
 Then follow the steps [above](#local). You can directly use `pipenv` for all commands instead of `python -m pipenv`.
 
@@ -369,8 +378,4 @@ git commit -m "Completed version"  # or some update message
 git push  # follow the instructions
 ```
 
-Then, in Vocareum, use the terminal to clone your updated project.
-```shell
-cd work
-git clone https://your-mini-project-1-repo-url
-```
+You need to connect your Github account to Gradescope for submission. See the instruction in eDimension for this. You only need to do this once. After connecting your Github account, you can choose your repository to submit to Gradescope submission for your 1D Mini Project assignment.
