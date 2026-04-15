@@ -465,6 +465,7 @@ Use the following guide to do this design exercise:
 * List down various improvements that could potentially be done on the app. Consider the cost of doing those improvements as well.
 * Use Pugh Chart to choose which page that you would like to improve. 
 * Document all your design considerations and decisions and present them during your checkoff.
+* Be prepared to do ["whiteboard coding"](https://coderpad.io/resources/learn/whiteboard-for-programmers/) on any part of the project when requested during checkoff.
 
 ## Appendix: Setup for Local Machine
 
