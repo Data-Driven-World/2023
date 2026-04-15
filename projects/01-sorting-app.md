@@ -316,11 +316,12 @@ Follow the guides below to complete your task:
 
 During your checkoff you need to present the following for Exercise 3.
 
-* Your brainstorming of your ideation for the data. Show the inspiration from the various apps, websites, or any other information systems that you use during your brainstorming sessions.
+* Your brainstorming of your ideation for the data. Show the inspiration from the various apps, websites, or any other information systems that you use during your brainstorming sessions. Do document your brainstorming either on Miro, FigJam or other tools.
 * Present your criteria for your selection using Pugh Chart.
 * Do the same for your algorithm brainstorming and selection. Present your case why you choose this particular algorithm to implement using Pugh Chart.
 * Present your UI design using either Miro or Figma. You need to have more than one single design and one single iteration. You need to be able to share your design choice that leads you to your final UI design.
-* Demo and present your working app and implementation. 
+* Demo and present your working app and implementation.
+* Explain the algorithm that you choose and be prepared to do ["whiteboard coding"](https://coderpad.io/resources/learn/whiteboard-for-programmers/) with the instructors.
 
 ## Appendix: Setup for Local Machine
 
