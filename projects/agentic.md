@@ -57,7 +57,7 @@ GitHub Settings: You can also view this under Settings > Billing and plans > Pla
 
 ### Installing OpenCode
 
-You have two choice to install OpenCode:
+You have two choices to install OpenCode:
 
 * OpenCode Terminal (for the brave)
 * OpenCode Desktop (Beta)
@@ -82,6 +82,12 @@ Your instructors use OpenCode Terminal to test everything, but we understand tha
 1. Run OpenCode Desktop and Open the Project location. ![](./images/agentic/opencode_home.png)
 1. On the chat input type `/init` and press ENTER. This will create a file `AGENTS.md` that can be used for future work by the AI agent.
 1. You can start exploring the project by entering the following prompt: "Explain the code base and the folder structure.".
+
+### Video to Install OpenCode and Connect to Github Copilot
+
+<iframe src="https://sutdapac-my.sharepoint.com/personal/oka_kurniawan_sutd_edu_sg/_layouts/15/embed.aspx?UniqueId=f2523494-b7f8-4ea7-89f5-773f04922cdb&embed=%7B%22ust%22%3Afalse%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Downloading OpenCode and Connecting to Github.mp4"></iframe>
+
+<iframe src="https://sutdapac-my.sharepoint.com/personal/oka_kurniawan_sutd_edu_sg/_layouts/15/embed.aspx?UniqueId=daf60f50-399e-42fc-8f46-6d245d687357&embed=%7B%22ust%22%3Afalse%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="OpenCode Interface.mp4"></iframe>
 
 ## Mini Project 1 Exercise 3
 
@@ -140,6 +146,8 @@ The image below shows test cases for numbers but your exercise should generate t
 ### Task 4: Execute Red-Green-Refactor Cycle
 
 In a Test Driven Development (TDD), we follow this Red-Green-Refactor cycle. This means that we first write a test that fails (Red) and after that write an implementation that pass that test case (Green). After passing the test cases, we can refactor the code to optimise while maintaining the passing test (green-refactor).
+
+**We strongly recommend that you implement your new sort function on your own without AI.** This way, you will understand the algorithm better during the checkoff. 
 
 1. Run `pytest` from the root folder. This should result in the Red or failing test cases since there is no implementation yet.
 1. Comment out some test cases and focus on the one test case that is simple, for example, empty list or single element test case.
