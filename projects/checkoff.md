@@ -34,9 +34,11 @@ Our instructor/TA will then record the points for your MP in our internal excel 
 
 Please bring your laptop(s) and open your project when you approach our TA/Instructor for checkoff. **We want to see your program in person.**
 
-## Q&A Grading Breakdown
+## Q&A Plus Whiteboard Coding Grading Breakdown
 
-The Q&A session is **important** and will fulfil the **Understanding of Code** criteria. It really tests the understanding of your implementation and your general knowledge about the project. You may get various marks between **0 to 1 pt** per exercise with granularity of **0.25pt** depending on your answer.
+The Q&A Plus Whiteboard Coding session is **important** and will fulfil the **Understanding of Code** criteria. It really tests the understanding of your implementation and your general knowledge about the project. You may get various marks between **0 to 1 pt** per exercise with granularity of **0.25pt** depending on your answer.
+
+You may be asked to do ["whiteboard coding"](https://coderpad.io/resources/learn/whiteboard-for-programmers/) during the checkoff. Be prepared to write any part of the code on a whiteboard without reference to your source code or internet or AI.
 
 :::info
 Total max mark for this section is 2pts. 1pt max for **each** exercise in the MP.
