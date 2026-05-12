@@ -55,6 +55,7 @@ VS Code: Click the Copilot Icon in the bottom-right status bar. A "Copilot Usage
 
 GitHub Settings: You can also view this under Settings > Billing and plans > Plans and usage on the GitHub website.
 
+
 ### Installing OpenCode
 
 You have two choices to install OpenCode:
@@ -74,6 +75,12 @@ Your instructors use OpenCode Terminal to test everything, but we understand tha
 1. Under "Popular providers" find "GitHub Copilot" and click "Connect". ![](./images/agentic/opencode_providers.png)
 1. Click the link to open the Github site to allow connection with OpenCode. You will need to enter the code provided by OpenCode into the GitHub page and click "Allow". ![](./images/agentic/opencode_github_connect.png) ![](./images/agentic/opencode_github_link_code.png) ![](./images/agentic/github_allow_opencode.png)
 1. Once you are connected, click "Model" option at the bottom and search for "Github Copilot", choose one of the model such as `Claude Haiku 4.5`. ![](./images/agentic/opencode_choose_model.png)
+
+#### Connecting OpenCode with OpenRouter Instead of GitHub Copilot
+
+If you are unable to get GitHub Copilot working, do contact your instructor to request for OpenRouter API Key. You will need to fill in a form and your instructor will generate an API Key for you. The step is similar to connecting with GitHub Copilot in the previous section. You can see the video for the steps in connecting to OpenRouter.
+
+<iframe src="https://sutdapac-my.sharepoint.com/personal/oka_kurniawan_sutd_edu_sg/_layouts/15/embed.aspx?UniqueId=786bc8e8-461c-4b3f-8c28-9dad046e9c95&embed=%7B%22ust%22%3Afalse%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Adding OpenRouter API Key and Selecting Model.webm"></iframe>
 
 ### Starting OpenCode on a Project
 
