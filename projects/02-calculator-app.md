@@ -67,7 +67,7 @@ Notes:
 
 > A **virtual environment** is a collection of packages that you separate out for specific projects. For example, this project requires Streamlit and runs on Python 3.10. Since we do not want conflict with our default system Python, we install the packages we need into a different space and activate that space (the _environment_) when we run our project. (It is _virtual_ because all your environments are still on the same physical machine.) 
 
-In the following steps, we will only display the Unix/Linux commands which you can do in Vocareum. If you want to work locally, see the [appendix](#appendix-setup-for-local-machine).
+In the following steps, we will only display the Unix/Linux commands. If you want to work locally, see the [appendix](#appendix-setup-for-local-machine).
 
 Go to the root folder of mini project 2 template.
 
@@ -500,7 +500,7 @@ git clone https://your-mini-project-2-repo-url
 
 ### Installing Environment Locally
 
-The `Pipfile` was tested in Vocareum with Python 3.12. Some packages may break if you use a different Python version -- welcome to software engineering dependency hell! We recommend using Miniconda just for this course and create a separate environment for it.
+The `Pipfile` was tested with Python 3.12. Some packages may break if you use a different Python version -- welcome to software engineering dependency hell! We recommend using Miniconda just for this course and create a separate environment for it.
 
 [Download Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install), then open Anaconda Prompt (Windows) or Terminal (Mac/Linux). Run
 
